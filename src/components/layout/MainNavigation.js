@@ -12,17 +12,23 @@ import cssClasses from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={cssClasses.header}>
-      <div>React Meetups</div>
+      <div>
+        <Link to="/">The Aerialnaut</Link>
+      </div>
       <nav>
         <ul>
+          <li></li>
           <li>
-            <Link to="/">All Meetups</Link>
+            <Link to="/aerial-background">Aerial Background</Link>
           </li>
           <li>
-            <Link to="/new-meetup">new meetups</Link>
+            <Link to="/haunt-background">Haunt Background</Link>
           </li>
           <li>
-            <Link to="/favorites">favorites</Link>
+            <Link to="/current-projects">Current Projects</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
           </li>
         </ul>
       </nav>
