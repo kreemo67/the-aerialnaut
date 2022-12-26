@@ -1,39 +1,76 @@
-/** let custom components start with a capital letter */
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
-import { Route, Switch } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { ThemeProvider } from "styled-components";
 
-import AerialBackground from "./components/pages/AerialBackground";
-import CurrentProjects from "./components/pages/CurrentProjects";
-import Services from "./components/pages/Services";
-import HomePage from "./components/pages/Homepage";
+import Loader from "./components/Loader";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
+import About from "./sections/About";
+import Footer from "./sections/Footer";
 
-import HauntBackground from "./components/pages/HauntBackground";
-
-import Layout from "./components/layout/Layout";
+import Home from "./sections/Home";
+import Marquee from "./sections/Marquee";
+import NewArrival from "./sections/NewArrival";
+import Shop from "./sections/Shop";
+import GlobalStyles from "./styles/GlobalStyles";
+import { dark } from "./styles/Themes";
 
 function App() {
+  // useLocoScroll();
+  const containerRef = useRef(null);
+  const [Loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 3000);
+  }, []);
+
   return (
-    //localhost:3000
-    //mypage.com/favorites or /whatever
-    <Layout>
-      <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
-        <Route path="/aerial-background">
-          <AerialBackground />
-        </Route>
-        <Route path="/haunt-background">
-          <HauntBackground />
-        </Route>
-        <Route path="/current-projects">
-          <CurrentProjects />
-        </Route>
-        <Route path="/services">
-          <Services />
-        </Route>
-      </Switch>
-    </Layout>
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={dark}>
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+            // ... all available Locomotive Scroll instance options
+            smartphone: {
+              smooth: true,
+            },
+            tablet: {
+              smooth: true,
+            },
+          }}
+          watch={
+            [
+              //..all the dependencies you want to watch to update the scroll.
+              //  Basicaly, you would want to watch page/location changes
+              //  For exemple, on Next.js you would want to
+              //  watch properties like `router.asPath` (you may want to add more criterias
+              //  if the instance should be update on locations with query parameters)
+            ]
+          }
+          containerRef={containerRef}
+        >
+          <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence>
+          <main className="App" data-scroll-container ref={containerRef}>
+            <ScrollTriggerProxy />
+            <AnimatePresence>
+              {Loaded ? null : <Loader />}
+
+              <Home key="home" />
+              <About key="about" />
+              <Shop key="Shop" />
+              <Marquee key="marquee" />
+              <NewArrival key="new arrival" />
+              <Footer key="Footer" />
+            </AnimatePresence>
+          </main>
+        </LocomotiveScrollProvider>
+      </ThemeProvider>
+    </>
   );
 }
 
