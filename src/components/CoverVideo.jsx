@@ -97,7 +97,7 @@ const Text = styled.div`
   font-weight: 300;
   position: absolute;
   padding: 2rem;
-  top: 10;
+  top: 10%;
   right: 0;
   z-index: 11;
 
@@ -152,8 +152,8 @@ const CoverVideo = () => {
             Welcome to Aerialnaut Entertainment!
             <br />
             <br />
-            My name is Bailey and I'm a multitalented LSU graduate with a knack
-            for innovation in aerial performance and scare entertainment.
+            My name is Bailey. I'm a multitalented LSU graduate with a knack for
+            innovation in aerial performance and scare entertainment.
           </motion.h2>
         </Text>
       </Title>
