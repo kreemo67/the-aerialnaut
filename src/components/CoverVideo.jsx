@@ -57,7 +57,7 @@ const Title = styled(motion.div)`
     font-size: ${(props) => props.theme.fontBig};
     position: fixed;
     left: 40px;
-    bottom: 92%;
+    bottom: 93.5%;
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
 
     @media (max-width: 30em) {
