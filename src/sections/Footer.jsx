@@ -16,7 +16,6 @@ const Section = styled.section`
   align-items: center;
   overflow-x: hidden;
 
-
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
 
@@ -135,7 +134,7 @@ const Footer = () => {
           data-scroll-speed="2"
         />
         <h3 data-scroll data-scroll-speed="-1">
-          Wibe Studio
+          The Aerialnaut
         </h3>
       </LogoContainer>
       <FooterComponent
@@ -159,16 +158,6 @@ const Footer = () => {
           <li aria-hidden="true" onClick={() => handleScroll(".new-arrival")}>
             new arrival
           </li>
-          <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
-              look book
-            </a>
-          </li>
-          <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
-              reviews
-            </a>
-          </li>
         </ul>
         <Bottom>
           <span
@@ -185,11 +174,11 @@ const Footer = () => {
           >
             Made with &hearts; by{" "}
             <a
-              href="http://youtube.com/codebucks"
+              href="https://www.linkedin.com/in/kreemo67"
               target={"_blank"}
               rel="noreferrer"
             >
-              CodeBucks
+              Kareem
             </a>
           </span>
         </Bottom>
