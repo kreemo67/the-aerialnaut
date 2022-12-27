@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Gradient } from "react-gradient";
 
 import img1 from "../assets/assets-aerialnaut/hoop2.png";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
+import hang2 from "../assets/assets-aerialnaut/silks-white1.jpg";
+import hang1 from "../assets/assets-aerialnaut/silks-white2.jpg";
+
+const gradients = [
+  ["#d28db7", "#c2a522"],
+  ["#d28db7", "#c2a522"],
+];
 
 const Section = styled.section`
   min-height: 100vh;
@@ -26,7 +32,7 @@ const Section = styled.section`
 
 const Left = styled.div`
   width: 50%;
-  font-size: ${(props) => props.theme.fontlg};
+  font-size: ${(props) => props.theme.fontxl};
   font-weight: 300;
   position: relative;
   z-index: 5;
@@ -45,7 +51,7 @@ const Left = styled.div`
     font-weight: 600;
 
     backdrop-filter: blur(2px);
-    background-color: ${(props) => `rgba(${props.theme.textRgba},0.4)`};
+    background-color: ${(props) => props.theme};
     border-radius: 20px;
   }
   @media (max-width: 48em) {
@@ -135,53 +141,52 @@ const Title = styled.h1`
 
 const About = () => {
   return (
-    <Section id="fixed-target" className="about">
-      <Title
-        data-scroll
-        data-scroll-speed="-2"
-        data-scroll-direction="horizontal"
-      >
-        About
-      </Title>
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        We&apos;re fashion studio based in california. We create unique designs
-        that will blow your mind. We also design unique jewellary pieces.
-        Fashion is an ART that can not be grasped by everyone.
-        <br />
-        <br />
-        We are very dedicated to making our products. We offer unique and
-        creative products to a wide range of people. We have a variety of
-        styles, but for most people, all of the options are in the box. We
-        specialize in making things that make you happy.
-        <br />
-        <br />
-        We strive to build on our vision. As a fashion label, we do our best to
-        create amazing experiences for all people. We are always looking to make
-        something that is easy for everyone.
-      </Left>
-
-      <Right>
-        <img width="400" height="600" src={img1} alt="About Us" />
-        <img
-          width="400"
-          height="600"
-          className="small-img-1"
-          src={img2}
-          alt="About Us"
-          data-scroll
-          data-scroll-speed="5"
-        />
-        <img
-          width="400"
-          height="600"
-          className="small-img-2"
-          src={img3}
-          alt="About Us"
+    <Gradient
+      gradients={gradients} // required
+      property="background"
+      duration={3000}
+      angle="45deg"
+    >
+      <Section id="fixed-target" className="about">
+        <Title
           data-scroll
           data-scroll-speed="-2"
-        />
-      </Right>
-    </Section>
+          data-scroll-direction="horizontal"
+        >
+          About Me
+        </Title>
+
+        <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
+          My name is Bailey and I'm a multitalented LSU graduate with a knack
+          for innovation in circus performance and scare entertainment. With
+          over 13 years of theatre experience, I’m particularly skilled in
+          high-energy movement, character development and story development.
+          <br />
+          <br />
+        </Left>
+        <Right>
+          <img width="400" height="600" src={img1} alt="About Us" />
+          <img
+            width="400"
+            height="600"
+            className="small-img-1"
+            src={hang2}
+            alt="About Us"
+            data-scroll
+            data-scroll-speed="5"
+          />
+          <img
+            width="400"
+            height="600"
+            className="small-img-2"
+            src={hang1}
+            alt="About Us"
+            data-scroll
+            data-scroll-speed="-2"
+          />
+        </Right>
+      </Section>
+    </Gradient>
   );
 };
 

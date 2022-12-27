@@ -3,17 +3,18 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
+import { Gradient } from "react-gradient";
 
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
-import img4 from "../assets/Images/4.webp";
-import img5 from "../assets/Images/5.webp";
-import img6 from "../assets/Images/6.webp";
-import img7 from "../assets/Images/7.webp";
-import img8 from "../assets/Images/8.webp";
-import img9 from "../assets/Images/9.webp";
-import img10 from "../assets/Images/10.webp";
+import silkscircus1 from "../assets/assets-aerialnaut/silks-circus1.jpg";
+import silkscircus5 from "../assets/assets-aerialnaut/silks-circus5.JPG.jpg";
+import roseroom from "../assets/assets-aerialnaut/rose-room-chair.jpeg";
+import IMG_2737 from "../assets/assets-aerialnaut/IMG_2737.png";
+import IMG_2738 from "../assets/assets-aerialnaut/IMG_2738.png";
+import IMG_2739 from "../assets/assets-aerialnaut/IMG_2739.png";
+import IMG_2740 from "../assets/assets-aerialnaut/IMG_2740.png";
+import IMG_2741 from "../assets/assets-aerialnaut/IMG_2741.png";
+import hoop3 from "../assets/assets-aerialnaut/hoop3.png";
+import hoop1 from "../assets/assets-aerialnaut/hoop1.png";
 
 const Section = styled(motion.section)`
   min-height: 100vh;
@@ -30,6 +31,10 @@ const Section = styled(motion.section)`
 
   /* background-color: orange; */
 `;
+const gradients = [
+  ["#bd19d6", "#ea7d10"],
+  ["#ff2121", "#25c668"],
+];
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
@@ -135,7 +140,7 @@ const Product = ({ img, title = "" }) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: false, amount: "all" }}
     >
-      <img width="400" height="600" src={img} alt={title} />
+      <img width="600" height="800" src={img} alt={title} />
       <h1>{title}</h1>
     </Item>
   );
@@ -197,33 +202,32 @@ const Shop = () => {
   return (
     <Section ref={ref} id="shop">
       <Title data-scroll data-scroll-speed="-1">
-        New Collection
+        Aerial and Cirque du soleil
       </Title>
       <Left>
         <p>
-          The brand new collection is currently being developed in USA. We
-          create our products using best quality material, including the use of
-          some of the pure fabrics to make our products. All products are made
-          using the best materials, from the finest cotton to the finest
-          fabrics.
+          Performed 50+ sets and theatrical shows for several reputable
+          companies: <br /> <br />
+          Louisiana State University, Parisian Cirque O Champs, 13th Gate
+          Haunted House, DFNTLY Entertainment, Fly Unfeathered Events, Aqua Acro
+          Entertainment, Cerceaux Sisters and Rose Room ATX.
           <br /> <br />
-          We have lots of different clothing options like shoes, jackets and
-          dresses. Not only clothes but we also provide unique Jewellery as
-          well. It is great for us to carry our new clothes all around the
-          country and look different.
+          Assisted with grant research, created the company budget, opened
+          communications with theatrical companies and coordinated for the
+          upcoming audition workshops.
         </p>
       </Left>
       <Right data-scroll ref={Horizontalref}>
-        <Product img={img3} title="Sweatshirts" />
-        <Product img={img4} title="Ethnic Wear" />
-        <Product img={img1} title="Man Basics" />
-        <Product img={img2} title="Tops" />
-        <Product img={img5} title="Blazers" />
-        <Product img={img6} title="Suits" />
-        <Product img={img7} title="Antiques" />
-        <Product img={img8} title="Jewellery" />
-        <Product img={img9} title="Watches" />
-        <Product img={img10} title="Special Edition" />
+        <Product img={roseroom} title="Rose Room" />
+        <Product img={IMG_2737} title="gradientpic1" />
+        <Product img={silkscircus1} title="silks1" />
+        <Product img={silkscircus5} title="silks2" />
+        <Product img={IMG_2737} title="gradientpic1" />
+        <Product img={IMG_2738} title="gradientpic2" />
+        <Product img={IMG_2739} title="gradientpic3" />
+        <Product img={IMG_2740} title="gradientpic4" />
+        <Product img={IMG_2741} title="gradientpic5" />
+        <Product img={hoop3} title="hoop3" />
       </Right>
     </Section>
   );

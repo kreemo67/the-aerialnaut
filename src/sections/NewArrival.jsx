@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import React, {  useLayoutEffect, useRef } from 'react';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useLayoutEffect, useRef } from "react";
+import styled from "styled-components";
 
-import img1 from '../assets/Images/11.webp';
-import img2 from '../assets/Images/12.webp';
-import img3 from '../assets/Images/13.webp';
-import img4 from '../assets/Images/14.webp';
+import img1 from "../assets/Images/11.webp";
+import img2 from "../assets/Images/12.webp";
+import img3 from "../assets/Images/13.webp";
+import img4 from "../assets/Images/14.webp";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -37,24 +37,24 @@ const Overlay = styled.div`
   z-index: 11;
 
   @media (max-width: 70em) {
-  width: 40vw;
+    width: 40vw;
 
     height: 80vh;
   }
 
   @media (max-width: 64em) {
-  width: 50vw;
-  box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+    width: 50vw;
+    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
 
     height: 80vh;
   }
   @media (max-width: 48em) {
-  width: 60vw;
+    width: 60vw;
 
     height: 80vh;
   }
   @media (max-width: 30em) {
-  width: 80vw;
+    width: 80vw;
 
     height: 60vh;
   }
@@ -75,23 +75,19 @@ const Container = styled.div`
   align-items: center;
 
   @media (max-width: 64em) {
-  width: 30vw;
-
-
+    width: 30vw;
   }
   @media (max-width: 48em) {
-  width: 40vw;
-
+    width: 40vw;
   }
   @media (max-width: 30em) {
-  width: 60vw;
-
+    width: 60vw;
   }
 `;
 
 const Title = styled(motion.h1)`
   font-size: ${(props) => props.theme.fontxxxl};
-  font-family: 'Kaushan Script';
+  font-family: "Kaushan Script";
   font-weight: 300;
   /* text-transform: capitalize; */
   color: ${(props) => props.theme.body};
@@ -104,12 +100,9 @@ const Title = styled(motion.h1)`
 
   @media (max-width: 64em) {
     font-size: ${(props) => props.theme.fontxxl};
-
-
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
-  
   }
 `;
 const Text = styled.div`
@@ -124,9 +117,7 @@ const Text = styled.div`
 
   @media (max-width: 48em) {
     display: none;
-  
   }
- 
 `;
 
 const Item = styled.div`
@@ -155,50 +146,49 @@ const Photos = ({ img, name }) => {
 };
 
 const NewArrival = () => {
-   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
 
   const ScrollingRef = useRef(null);
-
 
   useLayoutEffect(() => {
     let element = ref.current;
 
     let scrollingElement = ScrollingRef.current;
-let t1= gsap.timeline();
+    let t1 = gsap.timeline();
     setTimeout(() => {
       let mainHeight = scrollingElement.scrollHeight;
       element.style.height = `calc(${mainHeight / 4}px)`;
       t1.to(element, {
         scrollTrigger: {
           trigger: element,
-          start: 'top top',
-          end: 'bottom+=100% top-=100%',
-          scroller: '.App', //locomotive-scroll
+          start: "top top",
+          end: "bottom+=100% top-=100%",
+          scroller: ".App", //locomotive-scroll
           scrub: 1,
           pin: true,
           // markers: true,
         },
-        ease: 'none',
+        ease: "none",
       });
 
       t1.fromTo(
         scrollingElement,
         {
-          y: '0',
+          y: "0",
         },
         {
-          y: '-100%',
+          y: "-100%",
           scrollTrigger: {
             // id: `section-${index + 1}`,
             trigger: scrollingElement,
-            start: 'top top',
-            end: 'bottom top',
-            scroller: '.App',
+            start: "top top",
+            end: "bottom top",
+            scroller: ".App",
             scrub: 1,
             // markers: true,
           },
-        },
+        }
       );
 
       ScrollTrigger.refresh();
@@ -212,13 +202,15 @@ let t1= gsap.timeline();
   }, []);
 
   return (
-    <Section  ref={ref} id="fixed-target" className="new-arrival">
+    <Section ref={ref} id="fixed-target" className="new-arrival">
       <Overlay />
 
       <Title
-        data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
+        data-scroll
+        data-scroll-speed="-2"
+        data-scroll-direction="horizontal"
       >
-        New Arrivals
+        Haunt Experience
       </Title>
 
       <Container ref={ScrollingRef}>
@@ -229,17 +221,33 @@ let t1= gsap.timeline();
       </Container>
 
       <Text data-scroll data-scroll-speed="-4">
-        There is new collection available for cool clothes in all sizes. This collection
-        is a great way to find a new look for you. It offers a variety of cool apparel
-        styles to fit your taste, while you can also find some cool clothes that you can
-        wear everyday.
+        Performed in 8+ different scenes as a cannibalistic hillbilly handywoman
+        [3 yrs].
         <br />
         <br />
-        The first line of clothing you will see on this collection is for men. The
-        collection also includes three new styles for women.
+        Performed a 3-min immersive scene as the lead asylum patient [2 yrs].
         <br />
         <br />
-        Give it a try and experience a new look.
+        Performed a 2-min high energy scene as a cartoony squawking bird for the
+        hayride [1 yr].
+        <br /> <br />
+        Served as a fill in for many actors that got hurt/sick on a nightly
+        basis.
+        <br />
+        <br />
+        Creator and logistics lead for 70+ events total with 10 - 120 people in
+        attendance.
+        <br />
+        <br />
+        Created characters, storylines and connections for ALL speaking and
+        non-speaking roles as a team.
+        <br />
+        <br />
+        Collaborated in the overall development of the Asylum and Hayride from
+        inception to opening.
+        <br />
+        <br />
+        Interviewed, auditioned and cast new actors on show nights.
       </Text>
     </Section>
   );

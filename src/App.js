@@ -15,12 +15,17 @@ import Marquee from "./sections/Marquee";
 import NewArrival from "./sections/NewArrival";
 import Shop from "./sections/Shop";
 import GlobalStyles from "./styles/GlobalStyles";
-import { dark } from "./styles/Themes";
+import { dark, light } from "./styles/Themes";
+import { Gradient } from "react-gradient";
 
 function App() {
   // useLocoScroll();
   const containerRef = useRef(null);
   const [Loaded, setLoaded] = useState(false);
+  const gradients = [
+    ["#bd19d6", "#ea7d10"],
+    ["#ff2121", "#25c668"],
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -59,9 +64,10 @@ function App() {
             <ScrollTriggerProxy />
             <AnimatePresence>
               {Loaded ? null : <Loader />}
-
               <Home key="home" />
+
               <About key="about" />
+
               <Shop key="Shop" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />

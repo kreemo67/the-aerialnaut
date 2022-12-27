@@ -70,6 +70,7 @@ const Title = styled(motion.div)`
     font-family: "Epilogue";
     font-weight: 500;
     align-items: baseline;
+    text-align: right;
     margin-right: 20%;
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     margin: 10 auto;
@@ -92,33 +93,21 @@ const container = {
   },
 };
 const Text = styled.div`
-  width: 20%;
+  width: 50%;
   font-size: ${(props) => props.theme.fontlg};
   font-weight: 300;
   position: absolute;
-  padding: 2rem;
+  text-indent: 10px;
+  padding: 3rem;
   top: 10%;
-  right: 0;
+  right: -10%;
   z-index: 11;
 
   @media (max-width: 48em) {
     display: none;
   }
-`;
-const TitlePos = styled.div`
-  width: 50%;
-  font-size: ${(props) => props.theme.fontlg};
-  font-weight: 300;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  padding: 2rem;
-  top: 10;
-  left: 0;
-  z-index: 11;
-
-  @media (max-width: 48em) {
-    display: none;
+  #scare {
+    color: red;
   }
 `;
 const item = {
@@ -153,7 +142,10 @@ const CoverVideo = () => {
             <br />
             <br />
             My name is Bailey. I'm a multitalented LSU graduate with a knack for
-            innovation in aerial performance and scare entertainment.
+            innovation in aerial performance and <span id="scare">
+              scare
+            </span>{" "}
+            entertainment.
           </motion.h2>
         </Text>
       </Title>
