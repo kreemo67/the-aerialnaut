@@ -4,10 +4,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 
-import img1 from "../assets/Images/11.webp";
-import img2 from "../assets/Images/12.webp";
-import img3 from "../assets/Images/13.webp";
-import img4 from "../assets/Images/14.webp";
+import hauntrat1 from "../assets/assets-aerialnaut/hauntrat1.JPG.jpg";
+import img2 from "../assets/assets-aerialnaut/chainsaw-haunt.JPG.jpg";
+import img3 from "../assets/assets-aerialnaut/haunt-selfie1.JPG.jpg";
+import img4 from "../assets/assets-aerialnaut/haunt-makeup.JPG.jpg";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -214,10 +214,10 @@ const NewArrival = () => {
       </Title>
 
       <Container ref={ScrollingRef}>
-        <Photos img={img1} name="Denim" />
-        <Photos img={img2} name="Cool Dresses" />
-        <Photos img={img3} name="Jackets" />
-        <Photos img={img4} name="T-shirts" />
+        <Photos img={hauntrat1} name="Haunt" />
+        <Photos img={img2} name="Haunt" />
+        <Photos img={img3} name="Haunt" />
+        <Photos img={img4} name="Haunt" />
       </Container>
 
       <Text data-scroll data-scroll-speed="-4">
