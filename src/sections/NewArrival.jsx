@@ -220,7 +220,7 @@ const NewArrival = () => {
         <Photos img={img4} name="Haunt" />
       </Container>
 
-      <Text data-scroll data-scroll-speed="-4">
+      <Text data-scroll data-scroll-speed="-.5">
         Performed in 8+ different scenes as a cannibalistic hillbilly handywoman
         [3 yrs].
         <br />

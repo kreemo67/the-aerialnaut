@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Gradient } from "react-gradient";
 
 import img1 from "../assets/assets-aerialnaut/hoop2.png";
-import hang2 from "../assets/assets-aerialnaut/silks-white1.jpg";
-import hang1 from "../assets/assets-aerialnaut/silks-white2.jpg";
 
 const gradients = [
   ["#d28db7", "#c2a522"],
@@ -15,7 +13,8 @@ const Section = styled.section`
   min-height: 100vh;
   width: 80vw;
   margin: 0 auto;
-
+  color: white;
+  background-color: linear-gradient(45deg, #d28db7, #c2a522);
   position: relative;
 
   display: flex;
@@ -31,12 +30,15 @@ const Section = styled.section`
 `;
 
 const Left = styled.div`
-  width: 50%;
+  width: 60%;
   font-size: ${(props) => props.theme.fontxl};
   font-weight: 300;
   position: relative;
   z-index: 5;
-  margin-top: 20%;
+  margin-top: 30%;
+  margin-left: -5%;
+  color: white;
+  text-shadow: 2px 2px 2px ${(props) => props.theme.body};
 
   @media (max-width: 64em) {
     width: 80%;
@@ -60,7 +62,7 @@ const Left = styled.div`
   @media (max-width: 30em) {
     font-size: ${(props) => props.theme.fontsm};
     padding: 2rem;
-    width: 70%;
+    width: 50%;
   }
 `;
 
@@ -116,14 +118,15 @@ const Right = styled.div`
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontBig};
-  font-family: "Kaushan Script";
+  font-family: "Epilogue";
   font-weight: 300;
   /* text-transform: capitalize; */
 
   position: absolute;
-  top: 1rem;
-  left: 5%;
+  top: 3rem;
+  left: -10%;
   z-index: 5;
+  text-shadow: 4px 4px 4px ${(props) => props.theme.body};
 
   span {
     display: inline-block;
@@ -156,34 +159,17 @@ const About = () => {
           About Me
         </Title>
 
-        <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-          My name is Bailey and I'm a multitalented LSU graduate with a knack
-          for innovation in circus performance and scare entertainment. With
-          over 13 years of theatre experience, I’m particularly skilled in
-          high-energy movement, character development and story development.
+        <Left data-scroll data-scroll-target="#fixed-target">
+          My name is Bailey. I'm a multi-talented LSU graduate with a knack for
+          innovation in circus performance and scare entertainment. <br />
+          <br />
+          With over 13 years of theatre experience, I’m particularly skilled in
+          high-energy movement and character/story development.
           <br />
           <br />
         </Left>
         <Right>
           <img width="400" height="600" src={img1} alt="About Us" />
-          <img
-            width="400"
-            height="600"
-            className="small-img-1"
-            src={hang2}
-            alt="About Us"
-            data-scroll
-            data-scroll-speed="5"
-          />
-          <img
-            width="400"
-            height="600"
-            className="small-img-2"
-            src={hang1}
-            alt="About Us"
-            data-scroll
-            data-scroll-speed="-2"
-          />
         </Right>
       </Section>
     </Gradient>

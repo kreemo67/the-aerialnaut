@@ -26,26 +26,23 @@ const Section = styled(motion.section)`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  background-image: linear-gradient(45deg, #d28db7, #c2a522);
 
   position: relative;
 
   /* background-color: orange; */
 `;
-const gradients = [
-  ["#bd19d6", "#ea7d10"],
-  ["#ff2121", "#25c668"],
-];
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
-  font-family: "Kaushan Script";
+  font-family: "Epilogue";
   font-weight: 300;
   /* text-transform: capitalize; */
   color: ${(props) => props.theme.text};
-  text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+  text-shadow: 4px 4px 4px ${(props) => props.theme.body};
 
   position: absolute;
-  top: 1rem;
+  top: 0.5rem;
   left: 5%;
   z-index: 11;
 
@@ -102,6 +99,7 @@ const Right = styled.div`
   left: 35%;
   padding-left: 30%;
   background-color: ${(props) => props.theme.grey};
+
   min-height: 100vh;
 
   display: flex;

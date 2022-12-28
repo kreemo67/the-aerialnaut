@@ -56,9 +56,10 @@ const Title = styled(motion.div)`
     font-family: "Epilogue";
     font-size: ${(props) => props.theme.fontBig};
     position: fixed;
+
     left: 40px;
     bottom: 93.5%;
-    text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+    text-shadow: 4px 4px 4px ${(props) => props.theme.body};
 
     @media (max-width: 30em) {
       /* font-size: ${(props) => props.theme.fontxxxl}; */
@@ -71,14 +72,15 @@ const Title = styled(motion.div)`
     font-weight: 500;
     align-items: baseline;
     text-align: right;
-    margin-right: 20%;
-    text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+    margin-right: 19%;
+
+    text-shadow: 4px 4px 4px ${(props) => props.theme.body};
     margin: 10 auto;
 
     @media (max-width: 30em) {
       font-size: ${(props) => props.theme.fontmd};
       /* font-size: calc(5rem + 8vw); */
-      margin-top: -1.5rem;
+      margin-top: -1rem;
     }
   }
 `;

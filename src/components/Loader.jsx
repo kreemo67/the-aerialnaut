@@ -20,7 +20,7 @@ const Container = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  background-color: black;
+  background: linear-gradient(45deg, #d28db7, #c2a522);
 
   width: 100%;
 

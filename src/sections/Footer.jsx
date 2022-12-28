@@ -17,6 +17,7 @@ const Section = styled.section`
   overflow-x: hidden;
 
   background-color: ${(props) => props.theme.body};
+  background-image: linear-gradient(45deg, #d28db7, #c2a522);
   color: ${(props) => props.theme.text};
 
   position: relative;
@@ -172,7 +173,7 @@ const Footer = () => {
             data-scroll-speed="-2"
             data-scroll-direction="horizontal"
           >
-            Made with &hearts; by{" "}
+            Made by{" "}
             <a
               href="https://www.linkedin.com/in/kreemo67"
               target={"_blank"}

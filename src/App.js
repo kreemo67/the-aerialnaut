@@ -15,7 +15,7 @@ import Marquee from "./sections/Marquee";
 import NewArrival from "./sections/NewArrival";
 import Shop from "./sections/Shop";
 import GlobalStyles from "./styles/GlobalStyles";
-import { dark, light } from "./styles/Themes";
+import { haunt, normal } from "./styles/Themes";
 import { Gradient } from "react-gradient";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <ThemeProvider theme={dark}>
+      <ThemeProvider theme={normal}>
         <LocomotiveScrollProvider
           options={{
             smooth: true,
@@ -64,15 +64,19 @@ function App() {
             <ScrollTriggerProxy />
             <AnimatePresence>
               {Loaded ? null : <Loader />}
+
               <Home key="home" />
 
               <About key="about" />
 
               <Shop key="Shop" />
+            </AnimatePresence>
+            <ThemeProvider theme={haunt}>
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />
-              <Footer key="Footer" />
-            </AnimatePresence>
+            </ThemeProvider>
+
+            <Footer key="Footer" />
           </main>
         </LocomotiveScrollProvider>
       </ThemeProvider>

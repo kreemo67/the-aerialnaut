@@ -1,8 +1,8 @@
-export const light = {
-  body: "#fff",
-  text: "#202020", // black shade
-  bodyRgba: "255, 255, 255",
-  textRgba: "32,32,32",
+export const normal = {
+  body: "#202020",
+  text: "#fff", // black shade
+  bodyRgba: "32,32,32",
+  textRgba: "255, 255, 255",
 
   grey: "#bebebe",
 
@@ -18,12 +18,12 @@ export const light = {
   navHeight: "5rem",
 };
 
-export const dark = {
+export const haunt = {
   body: "#202020",
   text: "#fff", // black shade
   bodyRgba: "32,32,32",
   textRgba: "255, 255, 255",
-
+  background: "255, 255, 255",
   grey: "#bebebe",
 
   fontxs: "0.75em",
