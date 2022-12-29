@@ -250,8 +250,6 @@ const NewArrival = () => {
         Collaborated in the overall development of the Asylum and Hayride from
         inception to opening.
         <br />
-        <br />
-        Interviewed, auditioned and cast new actors on show nights.
       </Text>
     </Section>
   );
