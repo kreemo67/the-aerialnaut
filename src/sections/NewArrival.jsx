@@ -21,7 +21,7 @@ const Section = styled.section`
   align-items: center;
 
   position: relative;
-  /* background-color: ${(props) => props.theme.text}; */
+  background-color: grey;
 `;
 
 const Overlay = styled.div`
@@ -31,7 +31,7 @@ const Overlay = styled.div`
   transform: translate(-50%, -50%);
   width: 30vw;
   height: 90vh;
-  box-shadow: 0 0 0 5vw ${(props) => props.theme.text};
+  box-shadow: 0 0 0 5vw grey;
   border: 3px solid black;
 
   z-index: 11;
@@ -44,7 +44,7 @@ const Overlay = styled.div`
 
   @media (max-width: 64em) {
     width: 50vw;
-    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+    box-shadow: 0 0 0 60vw grey
 
     height: 80vh;
   }
@@ -67,7 +67,7 @@ const Container = styled.div`
   transform: translate(-50%, 0%);
   width: 25vw;
   height: auto;
-  /* background-color: yellow; */
+  background-color: grey;
 
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ const Title = styled(motion.h1)`
   font-weight: 300;
   /* text-transform: capitalize; */
   color: ${(props) => props.theme.body};
-  text-shadow: 1px 1px 1px ${(props) => props.theme.text};
+  text-shadow: 3px 3px 3px black;
 
   position: absolute;
   top: 2rem;
@@ -103,6 +103,9 @@ const Title = styled(motion.h1)`
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
+  }
+  #scare {
+    color: red;
   }
 `;
 const Text = styled.div`
@@ -178,7 +181,7 @@ const NewArrival = () => {
           y: "0",
         },
         {
-          y: "-100%",
+          y: "-70%",
           scrollTrigger: {
             // id: `section-${index + 1}`,
             trigger: scrollingElement,
@@ -210,7 +213,9 @@ const NewArrival = () => {
         data-scroll-speed="-2"
         data-scroll-direction="horizontal"
       >
-        Haunt Experience
+        <span id="scare">
+          Haunt <br /> Experience
+        </span>
       </Title>
 
       <Container ref={ScrollingRef}>
@@ -241,7 +246,6 @@ const NewArrival = () => {
         <br />
         Created characters, storylines and connections for ALL speaking and
         non-speaking roles as a team.
-        <br />
         <br />
         Collaborated in the overall development of the Asylum and Hayride from
         inception to opening.
