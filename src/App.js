@@ -11,9 +11,9 @@ import About from "./sections/About";
 import Footer from "./sections/Footer";
 
 import Home from "./sections/Home";
-import Marquee from "./sections/Marquee";
-import NewArrival from "./sections/NewArrival";
-import Shop from "./sections/Shop";
+import Caution from "./sections/Caution";
+import Haunt from "./sections/Haunt";
+import Aerial from "./sections/Aerial";
 import GlobalStyles from "./styles/GlobalStyles";
 import { haunt, normal } from "./styles/Themes";
 import { Gradient } from "react-gradient";
@@ -69,11 +69,11 @@ function App() {
 
               <About key="about" />
 
-              <Shop key="Shop" />
+              <Aerial key="Aerial" />
             </AnimatePresence>
             <ThemeProvider theme={haunt}>
-              <Marquee key="marquee" />
-              <NewArrival key="new arrival" />
+              <Caution key="Caution" />
+              <Haunt key="new arrival" />
             </ThemeProvider>
 
             <Footer key="Footer" />
