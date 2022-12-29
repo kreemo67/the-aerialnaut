@@ -210,7 +210,7 @@ const NewArrival = () => {
 
       <Title
         data-scroll
-        data-scroll-speed="-2"
+        data-scroll-speed="-1"
         data-scroll-direction="horizontal"
       >
         <span id="scare">
