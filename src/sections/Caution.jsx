@@ -167,6 +167,36 @@ const Marquee = () => {
             CAUTION!
           </span>
         </Banner>
+        <Banner
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-target="#direction"
+        >
+          <span
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="6"
+            data-scroll-target="#direction"
+          >
+            CAUTION! Keep out! CAUTION! CAUTION! Keep out! CAUTION! CAUTION!
+            CAUTION!
+          </span>
+        </Banner>
+        <Banner
+          data-scroll
+          data-scroll-speed="1"
+          data-scroll-target="#direction"
+        >
+          <span
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="6"
+            data-scroll-target="#direction"
+          >
+            CAUTION! Keep out! CAUTION! CAUTION! Keep out! CAUTION! CAUTION!
+            CAUTION!
+          </span>
+        </Banner>
       </Container>
     </Section>
   );
